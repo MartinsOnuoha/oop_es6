@@ -5,17 +5,13 @@ class BankAccount {
         this.balance = account_balance;
     }
 
-   
-
     getBalance() {
         return this.balance;
     }
-     /* Encapsulation */
+    /* Encapsulation */
     getDetail(pin) {
         details = [this.name, this.balance];
-        if(pin === this.pin){
-            return details;
-        }
+        return details;
     }
     
     
@@ -30,6 +26,41 @@ class BankAccount {
         }
         else {
           return "Transaction Unsuccessful! Balance is: " + this.balance;
-        }       
+        }
+            
+            
+    }
+    
+    deposit(name, amount) {
+      if (name === this.name && amount > 0) {
+        this.balance += amount;
+        return "Transaction Successful! Balance is: " + this.balance;
+      }
+      else {
+        return "Transaction Unsuccessful! Balance is: " + this.balance;
+      }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
