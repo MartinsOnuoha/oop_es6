@@ -56,7 +56,7 @@ class CurrentAccount extends BankAccount {
         if (amount < 0){
           return "Invalid Amount!";
         }
-        else if(checkbook === true && name === this.name && amount < this.balance && typeof(checkbook) === boolean) {
+        else if(checkbook === true && name === this.name && amount < this.balance) {
           this.balance -= amount;
           return "Transaction Successful! Balance is: " + this.balance;
         }
